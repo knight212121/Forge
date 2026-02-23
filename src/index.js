@@ -1,8 +1,9 @@
-const express = require("express");
+import express, { json } from "express";
 const app = express();
-app.use(express.json());
+app.use(json());
 
-const noteRoutes = require("./routes/notes.routes");
+import noteRoutes from "./routes/notes.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
 app.get("/", (req, res) => {
     res.send("Homepage");
@@ -13,6 +14,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/notes", noteRoutes);
+app.use("/auth", authRoutes);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");

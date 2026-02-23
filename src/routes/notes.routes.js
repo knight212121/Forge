@@ -1,7 +1,7 @@
-const express = require("express");
-const router = express.Router();
-const { getData } = require("../controllers/notes.controller");
+import { Router } from "express";
+const router = Router();
+import { getData } from "../controllers/notes.controller.js";
 
 router.get("/", getData);
 
-module.exports = router;
+export default router;

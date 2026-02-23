@@ -1,6 +1,7 @@
 {
   "name": "forge",
   "version": "1.0.0",
+  "type": "module",
   "description": "Personal Knowledge & Habit Backend API",
   "homepage": "https://github.com/knight212121/Forge#readme",
   "bugs": {
@@ -12,12 +13,12 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "pg": "^8.18.0"

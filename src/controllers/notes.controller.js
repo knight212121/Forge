@@ -1,8 +1,8 @@
-const db = require("../config/db");
+import { query } from "../config/db.js";
 
-exports.getData = async (req, res) => {
+export async function getData(req, res) {
     try {
-        const result = await db.query("SELECT * from users");
+        const result = await query("SELECT * from notes");
         res.json(result.rows);
     } catch (error) {
         res.status(500).json({ success: false, error: error });
